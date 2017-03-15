@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <%- include layouts/headers.ejs %>
+    </head>
+
+    <body ng-app="Pulsatio">
+        <!-- Navigation section -->
+        <%- include layouts/navigation_init.ejs %>
+
+        <div class="container">
+            <div class="page-header">
+                <p align="center"><img src="/assets/images/Iconillo.png" alt="Pulsatio" height="250px"/></p>
+                <h1 align="center">PULSATIO</h1>
+            </div>
+            <div>
+                <ul class="nav nav-tabs nav-justified" role="tablist" >
+                    <li role="presentation" class="active"><a href="#inicio" aria-controls="inicio" role="tab" data-toggle="tab">Inicio</a></li>
+                    <li role="presentation"><a href="#funcionalidad" aria-controls="funcionalidad" role="tab" data-toggle="tab">Funcionalidad</a></li>
+                    <li role="presentation"><a href="#queespulsatio" aria-controls="queespulsatio" role="tab" data-toggle="tab">¿Qué es Pulsatio?</a></li>
+                    <li role="presentation"><a href="#convenios" aria-controls="convenios" role="tab" data-toggle="tab">Convenios</a></li>
+                    <li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab">Contacto</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="inicio">
+                        <h2 align="center">Inicio</h2>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="funcionalidad">
+                        <h2 align="center">Funcionalidad</h2>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="queespulsatio">
+                        <h2 align="center">¿Qué es Pulsatio?</h2>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="convenios">
+                        <h2 align="center">Convenios</h2>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="contacto">
+                        <h2 align="center">Contacto</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('layouts/footer_init.ejs') %>
+    </body>
+</html>
