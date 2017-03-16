@@ -22,6 +22,31 @@
         res.render('access/login', { title: 'Login' });
     });
 
+    /* GET Show profile page */
+    router.get('/profile/show_profile', function(req, res) {
+        res.render('profile/show_profile', { title: 'Perfil' });
+    });
+
+    /* GET Edit profile page */
+    router.get('/profile/edit_profile', function(req, res) {
+        res.render('profile/edit_profile', { title: 'Editar perfil' });
+    });
+
+    /* GET Dashboard page  */
+    router.get('/dashboard', function(req, res) {
+        res.render('dashboard/home', { title: 'Dashboard' });
+    });
+
+    /* GET Patients page */
+    router.get('/patients', function(req, res) {
+        res.render('dashboard/patients', {  title: 'Pacientes' });
+    });
+
+    /* GET Locations page */
+    router.get('/locations', function(req, res) {
+        res.render('dashboard/locations', { title: 'Editar perfil' });
+    });
+
     router.get('/api/todos', function(req, res) {
         db.todos.find(function(err, data) {
             res.json(data);

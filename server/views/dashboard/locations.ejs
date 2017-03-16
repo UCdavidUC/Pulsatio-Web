@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <%- include('../layouts/headers') %>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <%- include('../layouts/navigation') %>
+
+        <div class="container">
+            <div class="page-header">
+                <h1><%= title %>
+            </div>
+            <div class="pane-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="location_1">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+                                INCMNSZ
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="location_1">
+                        <div class="panel-body">
+                            <h4>Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán</h4>
+                            <p><strong>Decripción: </strong>El Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán es ....</p>
+                            <p><strong>Dirección: </strong>Dirección</p>
+                            <p><strong>Consultorio: </strong>Consultorio No. 4, torre B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
