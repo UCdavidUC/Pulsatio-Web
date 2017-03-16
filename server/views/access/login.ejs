@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <%- include('../layouts/headers') %>
+    </head>
+    <body ng-app="Pulsatio">
+        <!-- Navigation section -->
+        <%- include('../layouts/navigation_init') %>
+
+        <div class="container">
+            <div class="page-header">
+                <h1><%= title %><h1>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="email" placeholder="Email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Contrase&ntilde;a:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="password" placeholder="Email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4 col-md-4 col-sm-offset-2 col-md-offset-2">
+                        <input type="submit" class="btn btn-primary btn-block" value="Entrar" />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <%- include('../layouts/footer_init') %>
+    </body>
+</html>

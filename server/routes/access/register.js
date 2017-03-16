@@ -9,17 +9,7 @@
 
     /* GET Home page */
     router.get('/', function(req, res) {
-        res.render('index', { title: 'Pulsatio' });
-    });
-
-    /* GET Registration page */
-    router.get('/register', function(req, res) {
-        res.render('access/register', { title: 'Registro' });
-    });
-
-    /* GET Login page */
-    router.get('/login', function(req, res) {
-        res.render('access/login', { title: 'Login' });
+        res.render('register', { title: 'Registro' });
     });
 
     router.get('/api/todos', function(req, res) {

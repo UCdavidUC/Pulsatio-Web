@@ -11,8 +11,29 @@ html {
 }
 body {
   margin: 0;
-  padding-top: 70px;
+  padding-top: 70px;  
   padding-bottom: 70px;
+}
+.background {
+  background-image: url("/assets/images/pulsatio.jpg");
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+.background::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  width: 50%;
+  height: auto;
+}
+.init-titles {
+  padding-top: 25px;
 }
 article,
 aside,
