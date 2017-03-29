@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <%- include layouts/headers.html %>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body ng-app="Pulsatio">
+        <!-- Navigation section -->
+        <%- include layouts/navigation_init.html %>
+
+        <div class="container">
+            <div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="inicio">
+                        <div class="container-fluid">
+							<div class="page-header">
+								<p align="center"><img src="/assets/images/Iconillo.png" alt="Pulsatio" height="250px"/></p>
+								<h1 align="center">PULSATIO</h1>
+							</div>
+                            <h2 align="center" class="init-titles">Keep in touch with your health</h2>
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p align="center" class="init-titles">Pulsatio le ayuda a conocer la evoluci&oacute;n de sus pacientes y 
+                                al mismo tiempo mejora su calidad de vida y opciones de tratamiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="funcionalidad">
+                        <%- include('access/_partials/funcionalidad.html') %>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="convenios">
+                        <div class="page header">
+							<h1 align="center" class="init-titles">CONVENIOS</h1>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="contacto">
+                        <div class="page-header">
+							<h1 align="center" class="init-titles">CONTACTO</h1>
+                        </div>
+                        <div class="col-sm-12 col-md-5">
+                             <p><strong>Dirección: </strong>Calle del Puente #222 Col. Ejidos de Huipulco, Tlalpan C.P. 14380, México D.F.</p>
+                             <p><strong>Teléfono: </strong>01 800 PULSATIO</p>
+                             <p><strong>Horario: </strong>24/7, not, solo entre semana de 8am a 8pm.</p>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="registrarseLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+						<h4 class="modal-title" id="registrarseLabel">Registro</h4>
+					</div>
+					<div class="modal-body">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+						<input type="submit" class="btn btn-primary" value="Enviar" />
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <%- include('layouts/footer_init.html') %>
+
+        <script>
+            function initMap() { 
+                var uluru = {lat: 19.2836, lng: -99.1352}; 
+                var map = new google.maps.Map(document.getElementById('map'), { 
+                    zoom: 4, 
+                    center: uluru 
+                }); 
+                var marker = new google.maps.Marker({ 
+                    position: uluru, 
+                    map: map 
+                }); }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCSL1x73Tn0vn4LPgvCv5tVBDvzRvtaeMg&callback=initMap"></script>
+    </body>
+</html>

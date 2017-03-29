@@ -12,8 +12,8 @@
 
     // Engine Setup
     app.set('views', path.join(__dirname, 'views'));
-    app.engine('ejs', require('ejs').renderFile);
-    app.set('view engine', 'ejs');
+    app.engine('html', require('ejs').renderFile);
+    app.set('view engine', 'html');
     app.use(logger('dev'));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({
